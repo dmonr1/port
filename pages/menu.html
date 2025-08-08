@@ -2,56 +2,101 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mi Portafolio - Menú</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Portafolio - Menú</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="../css/styles.css" />
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 
 <body>
-    <header class="main-header">
-        <div class="logo">
-            <img src="../images/logoport.png" alt="Logo" />
-        </div>
-        <nav class="nav-links">
-            <a href="#inicio" class="nav-item">Inicio</a>
-            <a href="#experiencia" class="nav-item">Experiencia</a>
-            <a href="#contacto" class="nav-item">Contacto</a>
-        </nav>
-    </header>
-
-    <div class="scroll-container">
-        <section id="inicio" class="hero">
-            <div class="hero-content">
-              <div class="icon-container">
-                <div class="icon-circle">
-                  <img src="../images/git.png" alt="GitHub" />
-                </div>
-                <div class="icon-circle">
-                  <img src="../images/gmail.png" alt="Gmail" />
-                </div>
-                <div class="icon-circle">
-                  <img src="../images/wsp.png" alt="WhatsApp" />
-                </div>
-              </div>
-              <h1 id="animated-title">Bienvenido a mi portafolio</h1>
-            </div>
-          </section>
-          
-        <section id="experiencia" class="hero-2">proyectos</section>
-        <section id="contacto" class="hero-3">...</section>
+  <header class="main-header">
+    <div class="logo">
+      <img src="../images/logoport.png" alt="Logo" />
     </div>
+    <nav class="nav-links">
+      <a href="#inicio" class="nav-item">Inicio</a>
+      <a href="#experiencia" class="nav-item">Experiencia</a>
+      <a href="#contacto" class="nav-item">Contacto</a>
+    </nav>
+  </header>
 
-    <script src="../js/main.js"></script>
+  <div class="scroll-container">
+    <section id="inicio" class="hero">
+      <div class="hero-content">
+        <div class="icon-container">
+          <div class="botones-container">
+            <a href="https://github.com/dmonr1" target="_blank" rel="noopener noreferrer">
+              <button class="btn-flotante">
+                <img src="../images/git.png" alt="GitHub" />
+              </button>
+            </a>
+            <button class="btn-flotante">
+              <img src="../images/gmail.png" alt="GitHub" />
+            </button>
+            <button class="btn-flotante">
+              <img src="../images/wsp.png" alt="GitHub" />
+            </button>
+          </div>
+        </div>
+        <h1 id="animated-title">Bienvenido a mi portafolio</h1>
+      </div>
+    </section>
+    <section id="experiencia" class="hero-2">
+      <h2 class="titulo-sobre-mi">Acerca de mí</h2>
+      <p class="sub">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit ut officia</p>
+
+      <div class="perfil-container">
+        <div class="perfil-foto">
+          <img src="../images/perfil-de-usuario.png" alt="Foto de perfil">
+        </div>
+
+        <div class="perfil-info">
+          <div class="perfil-card">
+            <p>
+              ¡Hola! Soy un desarrollador apasionado por crear interfaces elegantes y funcionales,
+              con experiencia en HTML, CSS, JavaScript y efectos creativos.
+            </p>
+          </div>
+
+          <div class="perfil-botones">
+            <a href="../docs/mi-cv.pdf" class="btn-descargar" download> Descargar CV</a>
+            
+            <a href="#" class="btn-proyectos"> Ver Proyectos</a>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="cards-container">
+        <div class="card">
+          <h3>Proyecto A</h3>
+          <p>Descripción breve del proyecto A.</p>
+        </div>
+        <div class="card">
+          <h3>Proyecto B</h3>
+          <p>Descripción breve del proyecto B.</p>
+        </div>
+        <div class="card">
+          <h3>Proyecto C</h3>
+          <p>Descripción breve del proyecto C.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="contacto" class="hero-3">...</section>
+  </div>
+
+  <script src="../js/main.js"></script>
 </body>
 
 </html>
