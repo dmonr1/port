@@ -21,7 +21,7 @@ html {
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: url("../images/hole.jpg");
+  background-color: #000; /* color base por si la imagen no carga */
   color: white;
 }
 
@@ -32,8 +32,10 @@ body {
   align-items: center;
   text-align: center;
   color: #f2f0eb;
+  background: url("../images/hole.jpg") center center no-repeat;
+  background-size: cover; /* que cubra sin deformarse */
+  background-attachment: fixed; /* opcional: para que no se mueva al scroll */
 }
-
 .hero,
 .hero-2,
 .hero-3 {
