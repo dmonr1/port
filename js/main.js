@@ -8,30 +8,50 @@ window.addEventListener('DOMContentLoaded', () => {
         icon.style.animationDelay = `${index * 0.2}s`;
     });
 
-    // 🎯 Añadimos animación a los botones
     const buttons = document.querySelectorAll('.btn-flotante');
     buttons.forEach((btn, index) => {
         btn.classList.add('fall-start');
         setTimeout(() => {
             btn.classList.add('fall-end');
-        }, index * 200 + 200); // retraso
+        }, index * 200 + 200); 
     });
- 
 
-    const title = document.getElementById('animated-title');
-    const words = title.innerText.split(' ');
+    function animateLine(elementId, delayOffset, callback) {
+        const title = document.getElementById(elementId);
+        const words = title.innerText.split(' ');
+        title.innerHTML = '';
 
-    title.innerHTML = '';
+        title.style.visibility = 'visible';
 
-    words.forEach((word, index) => {
-        const span = document.createElement('span');
-        span.innerText = word;
-        span.style.display = 'inline-block';
-        span.style.marginRight = '10px';
-        span.style.opacity = '0';
-        span.style.transform = 'translateY(-180px)';
-        span.style.animation = `fall 0.6s ease forwards`;
-        span.style.animationDelay = `${(icons.length * 0.2) + (buttons.length * 0.2) + index * 0.3}s`;
-        title.appendChild(span);
+        words.forEach((word, index) => {
+            const span = document.createElement('span');
+            span.innerText = word;
+            span.style.display = 'inline-block';
+            span.style.marginRight = '10px';
+            span.style.opacity = '0';
+            span.style.transform = 'translateY(-180px)';
+            span.style.animation = `fall 0.6s ease forwards`;
+            span.style.animationDelay = `${delayOffset + index * 0.3}s`;
+            title.appendChild(span);
+
+            if (index === words.length - 1 && typeof callback === 'function') {
+                const totalTime = delayOffset + (words.length * 0.3);
+                setTimeout(callback, totalTime * 1000);
+            }
+        });
+    }
+
+    const baseDelay = (icons.length * 0.2) + (buttons.length * 0.2);
+
+
+    animateLine('animated-title-line1', baseDelay, () => {
+    document.getElementById('animated-title-line2').classList.remove('hidden-line');
+    animateLine('animated-title-line2', 0, () => {
+        // Cuando termina la animación de la segunda línea, mostramos el web-container
+        const webContainer = document.querySelector('.web-container');
+        webContainer.classList.add('show');
     });
 });
+
+});
+
