@@ -13,7 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
         btn.classList.add('fall-start');
         setTimeout(() => {
             btn.classList.add('fall-end');
-        }, index * 200 + 200); 
+        }, index * 200 + 200);
     });
 
     function animateLine(elementId, delayOffset, callback) {
@@ -45,13 +45,18 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     animateLine('animated-title-line1', baseDelay, () => {
-    document.getElementById('animated-title-line2').classList.remove('hidden-line');
-    animateLine('animated-title-line2', 0, () => {
-        // Cuando termina la animación de la segunda línea, mostramos el web-container
-        const webContainer = document.querySelector('.web-container');
-        webContainer.classList.add('show');
+        document.getElementById('animated-title-line2').classList.remove('hidden-line');
+        animateLine('animated-title-line2', 0, () => {
+            const webContainer = document.querySelector('.web-container');
+            webContainer.classList.add('show');
+        });
     });
-});
+
+    setTimeout(() => {
+        const hero2 = document.getElementById('hero2');
+        hero2.scrollIntoView({ behavior: 'smooth' });
+    }, 1000);
+
 
 });
 

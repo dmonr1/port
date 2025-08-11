@@ -35,7 +35,7 @@ body {
   align-items: center;
   text-align: center;
   color: #f2f0eb;
-  background: url("../images/planeta.png") center center no-repeat;
+  background: url("../images/tierrra-grande.jpg") center center no-repeat;
 
   background-size: cover;
 }
@@ -115,12 +115,13 @@ body {
   color: #f2f0eb;
 }
 
-.hero-2 {
+.hero-3 {
   padding: 30px 0;
   flex-direction: column;
-    background: url("../images/luna2.png") center center no-repeat;
+  background: url("../images/luna2.png") center center no-repeat;
 
-  background-size: cover;}
+  background-size: cover;
+}
 
 .hero-2 h1,
 .hero-3 h1 {
@@ -128,12 +129,31 @@ body {
   font-weight: 700;
 }
 
+.hero-2 {
+  height: 100vh;
+  background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+#starCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
 /* ======== ANIMACIONES ======== */
 @keyframes fall {
   0% {
     transform: translateY(-60px);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -169,7 +189,7 @@ body {
   z-index: 100;
   backdrop-filter: blur(5px);
   box-shadow: 0 2px 6px rgba(255, 255, 255, 0.05),
-              0 4px 12px rgba(0, 0, 0, 0.4);
+    0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .logo img {
