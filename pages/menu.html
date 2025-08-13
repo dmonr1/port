@@ -30,8 +30,11 @@
   </header>
 
   <div class="scroll-container">
-    
+
     <section id="inicio" class="hero">
+      <canvas id="starCanvas1"></canvas> 
+      <div class="hero-overlay"></div>  
+    
       <div class="hero-content">
         <div class="icon-container">
           <div class="botones-container">
@@ -48,36 +51,24 @@
             </button>
           </div>
         </div>
-
+    
         <h1 id="animated-title-line1" class="titulo-linea1">Bienvenidos a mi</h1>
-        <h1 id="animated-title-line2" class="titulo-linea2 hidden-line">Portafolio web</h1>
-
+        <p  id="glitch" class="glitch">
+          <span aria-hidden="true">Portafolio Web</span>
+          Portafolio Web
+          <span aria-hidden="true">Portafolio Web</span>
+        </p>    
+        
         <div class="web-container">
           <img src="../images/web-icon.png" alt="Web" class="web-image" />
           <span class="web-text">www.diegorutti.com</span>
         </div>
-
       </div>
-    </section>
-
-    <section id="hero2" class="hero-2">
-      <div class="stars">
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-      </div>
-      <h2>Sección Especial</h2>
-      <p>Contenido intermedio antes de la experiencia.</p>
     </section>
     
-
+    <section id="hero2" class="hero-2">
+      <canvas id="starCanvas2"></canvas>
+    </section>
 
     <section id="contacto" class="hero-3">
       <h2 class="titulo-sobre-mi">Acerca de mí</h2>
@@ -119,7 +110,8 @@
           <p>Descripción breve del proyecto C.</p>
         </div>
       </div>
-    </section>  </div>
+    </section>
+  </div>
 
   <script src="../js/main.js"></script>
 </body>
