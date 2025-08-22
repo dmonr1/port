@@ -140,3 +140,4 @@ window.addEventListener('load', () => {
     initStars('starCanvas1', 500); 
     initStars('starCanvas2', 500); 
 });
+
